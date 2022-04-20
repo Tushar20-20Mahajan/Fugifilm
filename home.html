@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FUJIFILM</title>
+    <script src="https://kit.fontawesome.com/fd665e3003.js"> </script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+        #navbar {
+            display: flex;
+            position: sticky;
+            margin: 0px;
+            top: 0px;
+
+        }
+
+        #navbar .logo img {
+            height: 80px;
+            width: 80px;
+        }
+
+        #navbar ul {
+            display: flex;
+            top: 0px;
+            padding: 5px 18px;
+            list-style-type: none;
+
+
+
+        }
+
+        #navbar ul li a {
+            display: block;
+            padding: 3px 19px;
+            text-decoration: none;
+            position: relative;
+            border-radius: 10px;
+            color: black;
+            transition: all 1s ease-in-out;
+
+        }
+
+        #navbar ul li a:hover {
+            transform: scale(1.0);
+            background-color: white;
+
+
+        }
+
+        #navbar::before {
+            top: 0px;
+            margin: 0px;
+
+
+            background-color: black;
+            opacity: 0.4;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            content: "";
+
+
+        }
+
+
+        #navbar input {
+            position: relative;
+            display: block;
+
+            justify-content: center;
+            align-items: center;
+            right: 10px;
+            border-radius: 10px;
+            width: 150%;
+            height: 30px;
+
+
+
+
+
+        }
+
+        #navbar form {
+
+            display: block;
+            margin: auto;
+
+        }
+
+        #navbar .acc {
+            position: relative;
+            display: block;
+            margin: auto;
+            text-decoration: black;
+            color: black;
+
+
+
+        }
+
+        #navbar .acc i {
+            transition: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            text-decoration: black;
+
+
+            left: 0px;
+            font-size: 40px;
+
+
+        }
+
+        #navbar .acc i:hover {
+            transform: scale(1.5);
+
+        }
+
+        #main1::before {
+            content: "";
+            background-image: url(" https://fujifilm-x.com/wp-content/uploads/2022/01/10years-2560x980-1.jpg");
+            background-size: cover;
+            height: 75%;
+            width: 100%;
+            margin: 0px;
+
+            position: absolute;
+            z-index: -1;
+
+        }
+
+        #main1 {
+            height: 453px;
+            width: 719px
+        }
+
+
+
+        .box1 {
+            display: block;
+            color: whitesmoke;
+            width: 30%;
+
+            position: relative;
+            top: 70px;
+            left: 20px;
+
+
+            font-family: Extra-bold 800;
+        }
+
+        .box1::before {
+            content: "";
+            background-color: #021214;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.45;
+
+        }
+
+        #main {
+            display: grid;
+            grid-template-rows: 30%;
+            grid-gap: 30px;
+            top: 30px;
+
+
+
+        }
+
+
+
+        #main .box2 {
+            position: relative;
+
+        }
+
+        .box2::before {
+            content: "";
+            background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-x-t30-ii_pc.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin: 0px;
+            background-position: center center;
+
+
+
+        }
+
+        .box2 {
+            width: 100%;
+            height: 70vh;
+            color: black;
+            font-size: 55px;
+
+
+        }
+
+        .box3::before {
+            content: "";
+            background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/01/gfx100s-top-banner-1g.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 10px;
+            position: absolute;
+            background-position: center center;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin: 0px;
+
+        }
+
+        #main .box3 {
+            position: relative;
+        }
+
+        .box3 {
+            width: 100%;
+            height: 70vh;
+            color: white;
+            font-size: 55px;
+
+        }
+
+        .box4::before {
+            content: "";
+            background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-gfx50sii-pc_ger.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 10px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin: 0px;
+
+        }
+
+        #main .box4 {
+            position: relative;
+
+        }
+
+        .box4 {
+            width: 100%;
+            height: 70vh;
+            color: white;
+            font-size: 55px;
+
+        }
+
+        #main p {
+            margin: 65px;
+            color: white;
+        }
+
+        #main2 {
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-gap: 20px;
+            top: 30px;
+            margin-top: 10px;
+
+
+
+        }
+
+        .box5::before {
+            content: "";
+            background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-xf33mm_pc_gw.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 0px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin: 0px;
+
+        }
+
+        .box5 {
+            position: relative;
+            width: 100%;
+            height: 54vh;
+        }
+
+        .box5 p {
+            top: 10px;
+            color: white;
+        }
+
+        .box6 P {
+            top: 10px;
+            color: white;
+
+        }
+
+        .box6::before {
+            content: "";
+            background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-gf35-70mm_pc_gs.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 0px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin: 0px;
+
+        }
+
+        .box6 {
+            position: relative;
+            width: 100%;
+            height: 54vh;
+        }
+
+        footer::before {
+            content: "";
+            background-color: #021214;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.45;
+
+        }
+
+        footer {
+            display: flex;
+            top: 55px;
+            position: relative;
+            margin: 0px;
+        }
+
+        .footer1 {
+
+
+            height: 100%;
+            width: 31%;
+            color: black;
+            font-size: 19px;
+            padding: 4px;
+        }
+
+        #part1 {
+            margin-left: 40px;
+        }
+
+        #part2 {
+            margin-left: 60px;
+        }
+
+        #part3 {
+            padding: 60px;
+            text-decoration: underline;
+        }
+
+        i {
+            font-size: 40PX;
+            padding: 17px;
+        }
+
+        #part3 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #part3 a i:hover {
+            transform: scale(1.2);
+        }
+
+        .lastfooter {
+            background-color: black;
+            color: white;
+            display: flex;
+            padding: 10px;
+            margin-top: 40px;
+        }
+
+        .lastfooter p {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .lastfooter img {
+            width: 200px;
+            height: 50px;
+        }
+
+        #main button {
+            width: 20%;
+            height: 8%;
+            margin: 24px;
+            margin-top: 100px;
+
+        }
+
+        button {
+            width: 20%;
+            height: 8%;
+            margin: 24px;
+            margin-top: 177px;
+        }
+
+        button a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+        @media (min-width:700px) and (max-width:930px) {
+
+
+            html {
+                scroll-behavior: smooth;
+
+            }
+
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+
+
+            #navbar {
+                display: flex;
+                position: sticky;
+                margin: 0px;
+                top: 0px;
+                flex-direction: column;
+
+            }
+
+            #navbar .logo img {
+                height: 80px;
+                width: 80px;
+            }
+
+            #navbar ul {
+                display: flex;
+                top: 0px;
+                padding: 5px 18px;
+                list-style-type: none;
+
+
+
+            }
+
+            #navbar ul li a {
+                display: block;
+                padding: 3px 19px;
+                text-decoration: none;
+                position: relative;
+                border-radius: 10px;
+                color: whitesmoke;
+                transition: all 1s ease-in-out;
+
+            }
+
+            #navbar ul li a:hover {
+                transform: scale(2);
+                background-color: black;
+
+
+            }
+
+            #navbar::before {
+                top: 0px;
+                margin: 0px;
+
+
+                background-color: black;
+                opacity: 0.4;
+                position: absolute;
+                height: 100%;
+                background-position: center center;
+                content: "";
+
+
+
+            }
+
+
+            #navbar input {
+                position: relative;
+                display: block;
+
+                justify-content: center;
+                align-items: center;
+                right: 10px;
+                border-radius: 10px;
+                width: 150%;
+                height: 30px;
+
+
+
+
+
+            }
+
+            #navbar form {
+
+                display: block;
+                margin: auto;
+
+            }
+
+            #navbar .acc {
+                position: relative;
+                display: block;
+                margin: auto;
+                text-decoration: black;
+                color: black;
+
+
+
+            }
+
+            #navbar .acc i {
+                transition: all;
+                transition-duration: 2s;
+                transition-timing-function: ease-in-out;
+                text-decoration: black;
+
+
+                left: 0px;
+                font-size: 40px;
+
+
+            }
+
+            #navbar .acc i:hover {
+                transform: scale(1.5);
+
+            }
+
+            #main1::before {
+                content: "";
+                background-image: url(" https://fujifilm-x.com/wp-content/uploads/2022/01/10years-2560x980-1.jpg");
+                background-size: cover;
+                height: 75%;
+                width: 100%;
+                margin: 0px;
+                background-position: center center;
+
+                position: absolute;
+                z-index: -1;
+
+
+            }
+
+            #main1 {
+                height: 351px;
+                width: 719px
+            }
+
+
+
+            .box1 {
+                display: block;
+                color: whitesmoke;
+                width: 30%;
+
+                position: relative;
+                top: 70px;
+                left: 20px;
+
+
+                font-family: Extra-bold 800;
+            }
+
+            .box1::before {
+                content: "";
+                background-color: #021214;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                opacity: 0.45;
+
+
+
+            }
+
+            #main {
+                display: grid;
+                grid-template-rows: 57%;
+                grid-auto-rows: 57%;
+                top: 30px;
+
+
+            }
+
+
+
+            #main .box2 {
+                position: relative;
+
+            }
+
+            .box2::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-x-t30-ii_pc.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+
+
+            }
+
+            .box2 {
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 55px;
+
+
+            }
+
+            .box3::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/01/gfx100s-top-banner-1g.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 10px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            #main .box3 {
+                position: relative;
+            }
+
+            .box3 {
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 55px;
+
+            }
+
+            .box4::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-gfx50sii-pc_ger.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 10px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            #main .box4 {
+                position: relative;
+
+            }
+
+            .box4 {
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 55px;
+
+            }
+
+            #main p {
+                margin: 0px;
+            }
+
+            #main2 {
+                display: grid;
+                grid-template-columns: 50% auto;
+                grid-gap: 20px;
+
+                margin-top: 412px;
+
+
+
+            }
+
+            .box5::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-xf33mm_pc_gw.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 20px;
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            .box5 {
+                position: relative;
+                width: 100%;
+                height: 80vh;
+            }
+
+            .box6::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-gf35-70mm_pc_gs.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 20px;
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            .box6 {
+                position: relative;
+                width: 100%;
+                height: 80vh;
+            }
+
+            footer::before {
+                content: "";
+                background-color: #021214;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                opacity: 0.45;
+
+
+            }
+
+            footer {
+                display: flex;
+
+                top: 55px;
+                position: relative;
+                margin: 0px;
+            }
+
+            .footer1 {
+
+
+                height: 100%;
+                width: 31%;
+                color: black;
+                font-size: 19px;
+                padding: 4px;
+            }
+
+            #part3 {
+                padding: 40px;
+            }
+
+            i {
+                font-size: 25PX;
+                padding: 12px;
+            }
+
+            #part3 a {
+                text-decoration: none;
+                color: black;
+            }
+
+            #part3 a i:hover {
+                transform: scale(1.2);
+            }
+
+            .lastfooter {
+                background-color: black;
+                color: white;
+                display: flex;
+                padding: 10px;
+                margin-top: 30px;
+            }
+
+            .lastfooter p {
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            .lastfooter img {
+                width: 200px;
+                height: 50px;
+            }
+
+            button {
+                width: 31%;
+                height: 8%;
+                margin: 24px;
+                margin-top: 7px;
+            }
+
+            button a {
+                text-decoration: none;
+            }
+        }
+
+        @media (min-width:600px) and (max-width:700px) {
+
+            html {
+                scroll-behavior: smooth;
+
+            }
+
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+
+
+            #navbar {
+                display: flex;
+                position: sticky;
+                margin: 0px;
+                top: 0px;
+                flex-direction: column;
+
+            }
+
+            #navbar .logo img {
+                height: 80px;
+                width: 80px;
+            }
+
+            #navbar ul {
+                display: flex;
+                top: 0px;
+                padding: 5px 18px;
+                list-style-type: none;
+
+
+
+            }
+
+            #navbar ul li a {
+                display: block;
+                padding: 3px 19px;
+                text-decoration: none;
+                position: relative;
+                border-radius: 10px;
+                color: whitesmoke;
+                transition: all 1s ease-in-out;
+
+            }
+
+            #navbar ul li a:hover {
+                transform: scale(2);
+                background-color: black;
+
+
+            }
+
+            #navbar::before {
+                top: 0px;
+                margin: 0px;
+
+
+                background-color: black;
+                opacity: 0.4;
+                position: absolute;
+                height: 100%;
+                background-position: center center;
+                content: "";
+                width: 118%;
+
+
+
+            }
+
+
+            #navbar input {
+                position: relative;
+                display: block;
+
+                justify-content: center;
+                align-items: center;
+                right: 10px;
+                border-radius: 10px;
+                width: 150%;
+                height: 30px;
+
+
+
+
+
+            }
+
+            #navbar form {
+
+                display: block;
+                margin: auto;
+
+            }
+
+            #navbar .acc {
+                position: relative;
+                display: block;
+                margin: auto;
+                text-decoration: black;
+                color: black;
+
+
+
+            }
+
+            #navbar .acc i {
+                transition: all;
+                transition-duration: 2s;
+                transition-timing-function: ease-in-out;
+                text-decoration: black;
+
+
+                left: 0px;
+                font-size: 40px;
+
+
+            }
+
+            #navbar .acc i:hover {
+                transform: scale(1.5);
+
+            }
+
+            #main1::before {
+                content: "";
+                background-image: url(" https://fujifilm-x.com/wp-content/uploads/2022/01/10years-2560x980-1.jpg");
+                background-size: cover;
+                height: 75%;
+                width: 118%;
+                margin: 0px;
+                background-position: center center;
+
+                position: absolute;
+                z-index: -1;
+
+
+            }
+
+            #main1 {
+                height: 453px;
+                width: 719px
+            }
+
+
+
+            .box1 {
+                display: block;
+                color: whitesmoke;
+                width: 30%;
+
+                position: relative;
+                top: 70px;
+                left: 20px;
+
+
+                font-family: Extra-bold 800;
+            }
+
+            .box1::before {
+                content: "";
+                background-color: #021214;
+                position: absolute;
+                height: 80%;
+                width: 118%;
+                background-position: center center;
+                z-index: -1;
+                opacity: 0.45;
+
+
+
+            }
+
+            #main {
+                grid-auto-rows: 26%;
+                display: grid;
+                grid-template-rows: 24%;
+                grid-gap: 30px;
+                top: 30px;
+                width: 100%;
+
+
+
+            }
+
+
+
+            #main .box2 {
+                position: relative;
+
+            }
+
+            .box2::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-x-t30-ii_pc.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+
+
+            }
+
+            .box2 {
+                width: 118%;
+                height: 70vh;
+                color: white;
+                font-size: 55px;
+
+
+            }
+
+            .box3::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/01/gfx100s-top-banner-1g.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 10px;
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            #main .box3 {
+                position: relative;
+            }
+
+            .box3 {
+                width: 118%;
+                height: 70vh;
+                color: white;
+                font-size: 55px;
+
+            }
+
+            .box4::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-gfx50sii-pc_ger.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 10px;
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            #main .box4 {
+                position: relative;
+
+            }
+
+            .box4 {
+                width: 118%;
+                height: 70vh;
+                color: white;
+                font-size: 55px;
+
+            }
+
+            #main p {
+                margin: 35px;
+                color: white;
+            }
+
+            #main2 {
+                display: grid;
+                grid-template-columns: 65% 41%;
+                grid-gap: 28px;
+                top: 30px;
+                margin: 0px;
+                width: 100%;
+            }
+
+
+
+
+
+            .box5::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-xf33mm_pc_gw.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 20px;
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            .box5 {
+                position: relative;
+                width: 100%;
+                height: 80vh;
+            }
+
+            .box6::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-gf35-70mm_pc_gs.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 20px;
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            .box6 {
+                position: relative;
+                width: 118%;
+                height: 80vh;
+            }
+
+            footer::before {
+                content: "";
+                background-color: #021214;
+                position: absolute;
+                height: 100%;
+                width: 118%;
+                background-position: center center;
+                z-index: -1;
+                opacity: 0.45;
+
+
+            }
+
+            footer {
+                display: flex;
+
+                top: 0px;
+                position: relative;
+                margin: 0px;
+            }
+
+            .footer1 {
+
+
+                height: 100%;
+                width: 31%;
+                color: black;
+                font-size: 19px;
+                padding: 4px;
+            }
+
+            #part3 {
+                padding: 40px;
+            }
+
+            i {
+                font-size: 25PX;
+                padding: 12px;
+            }
+
+            #part3 a {
+                text-decoration: none;
+                color: black;
+            }
+
+            #part3 a i:hover {
+                transform: scale(1.2);
+            }
+
+            .lastfooter {
+                background-color: black;
+                color: white;
+                display: flex;
+                padding: 10px;
+            }
+
+            .lastfooter p {
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            .lastfooter img {
+                width: 200px;
+                height: 50px;
+            }
+
+            button a {
+                text-decoration: none;
+            }
+        }
+
+        @media (min-width:400px) and (max-width:600px) {
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+
+            }
+
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+
+
+            #navbar {
+                display: flex;
+                top: 0px;
+                position: relative;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+
+            #navbar .logo img {
+                height: 80px;
+                width: 80px;
+            }
+
+            #navbar ul {
+                display: flex;
+                top: 0px;
+                padding: 5px 18px;
+                list-style-type: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+
+
+
+            }
+
+            #navbar ul li a {
+                display: block;
+                padding: 3px 19px;
+                text-decoration: none;
+                position: relative;
+                border-radius: 10px;
+                color: whitesmoke;
+                transition: all 1s ease-in-out;
+
+            }
+
+            #navbar ul li a:hover {
+                transform: scale(2);
+                background-color: black;
+
+
+            }
+
+            #navbar::before {
+                top: 0px;
+                margin: 0px;
+
+
+                background-color: black;
+                opacity: 0.4;
+                position: absolute;
+                height: 100%;
+                background-position: center center;
+                content: "";
+                width: 100%;
+
+
+
+            }
+
+
+            #navbar input {
+                position: relative;
+                display: block;
+
+                justify-content: center;
+                align-items: center;
+                right: 10px;
+                border-radius: 10px;
+                width: 150%;
+                height: 30px;
+
+
+
+
+
+            }
+
+            #navbar form {
+
+                display: block;
+                margin: auto;
+
+            }
+
+            #navbar .acc {
+                position: relative;
+                display: block;
+                margin: auto;
+                text-decoration: black;
+                color: black;
+
+
+
+            }
+
+            #navbar .acc i {
+                transition: all;
+                transition-duration: 2s;
+                transition-timing-function: ease-in-out;
+                text-decoration: black;
+
+
+                left: 0px;
+                font-size: 40px;
+
+
+            }
+
+            #navbar .acc i:hover {
+                transform: scale(1.5);
+
+            }
+
+            #main1::before {
+                content: "";
+                background-image: url(" https://fujifilm-x.com/wp-content/uploads/2022/01/10years-2560x980-1.jpg");
+                background-size: cover;
+                height: 75%;
+                width: 100%;
+                margin: 0px;
+                background-position: center center;
+
+                position: absolute;
+                z-index: -1;
+
+
+            }
+
+            #main1 {
+                height: 395px;
+                width: 100%;
+            }
+
+
+
+            .box1 {
+                display: block;
+                color: whitesmoke;
+                width: 30%;
+
+                position: relative;
+                top: 70px;
+                left: 20px;
+
+
+                font-family: Extra-bold 800;
+            }
+
+            .box1::before {
+                content: "";
+                background-color: #021214;
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                opacity: 0.45;
+
+
+
+            }
+
+            #main {
+                display: grid;
+                grid-template-rows: 32%;
+                grid-auto-rows: 39%;
+                grid-row-gap: 11px;
+                margin-top: 253px;
+                width: 100%;
+
+
+
+            }
+
+
+
+            #main .box2 {
+                position: relative;
+
+
+            }
+
+            .box2::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-x-t30-ii_pc.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+
+
+            }
+
+            .box2 {
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 28px;
+
+
+            }
+
+            .box3::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/01/gfx100s-top-banner-1g.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 0px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            #main .box3 {
+                position: relative;
+                margin-top: 8px;
+                top: 0px;
+            }
+
+            .box3 {
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 28px;
+
+            }
+
+            .box4::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-gfx50sii-pc_ger.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 0px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            #main .box4 {
+                position: relative;
+                margin: 0px;
+                margin-top: 0px;
+
+            }
+
+            .box4 {
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 19px;
+
+            }
+
+            #main p {
+                margin: 0px;
+            }
+
+            #main2 {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                color: white;
+                top: 45px;
+                margin-top: 93px;
+                width: 100%;
+            }
+
+            #main2 p {
+                top: 10px;
+                color: white;
+
+            }
+
+
+
+            .box5::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-xf33mm_pc_gw.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 0px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            .box5 {
+                position: relative;
+                width: 100%;
+                height: 53vh;
+            }
+
+            .box6::before {
+                content: "";
+                background-image: url("https://fujifilm-x.com/wp-content/uploads/2021/09/home-gf35-70mm_pc_gs.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 0px;
+                position: absolute;
+                height: 80%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                margin: 0px;
+
+
+            }
+
+            .box6 {
+                position: relative;
+                width: 100%;
+                height: 55vh;
+            }
+
+            footer::before {
+                content: "";
+                background-color: #021214;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                z-index: -1;
+                opacity: 0.45;
+
+
+            }
+
+            footer {
+                display: flex;
+
+                top: 0px;
+                position: relative;
+                margin: 0px;
+                width: 100%;
+            }
+
+            .footer1 {
+
+
+                height: 100%;
+                width: 31%;
+                color: black;
+                font-size: 19px;
+                padding: 4px;
+            }
+
+            #part3 {
+                padding: 40px;
+            }
+
+            i {
+                font-size: 25PX;
+                padding: 12px;
+            }
+
+            #part3 a {
+                text-decoration: none;
+                color: black;
+            }
+
+            #part3 a i:hover {
+                transform: scale(1.2);
+            }
+
+            .lastfooter {
+                background-color: black;
+                color: white;
+                display: flex;
+                padding: 10px;
+            }
+
+            .lastfooter p {
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            .lastfooter img {
+                width: 200px;
+                height: 50px;
+            }
+
+            button {
+                width: 38%;
+                height: 9%;
+                left: 0px;
+                margin-top: -5px;
+                text-align: center;
+            }
+
+            button a {
+                text-decoration: none;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo"> <img src="Fujifilm_X_series.png" alt=""></div>
+        <ul>
+            <li id="item"><a href="home.html"> HOME</a></li>
+
+            <li id="item"><a href="Product.html"> PRODUCTS</a></li>
+            <li id="item"><a href="#down"> Contact US</a></li>
+            <li id="item"><a href="feedback.html"> FEEDBACK & YOUR QUERY</a></li>
+        </ul>
+        <form action="backend.php">
+
+            <input type="search" name="search" id="" placeholder="Type to Search">
+        </form>
+        <a href="loginfoem.html" class="acc"> <i class="far fa-user-circle"></i></a>
+
+    </nav>
+    <div id="main1">
+        <div class="box1">
+            <h1>OUR WIDE CAMERA RANGES</h1>
+
+        </div>
+    </div>
+    <div id="main">
+
+
+
+
+
+
+        <div class="box2">
+            <b>
+                <p> FUGIFILM GFX 50S</p>
+
+            </b>
+            <button> <a href="GFX 50S.html"> LEARN MORE </a> </button>
+        </div>
+        <div class="box3">
+            <b>
+                <p>
+                    FUJIFILM X-T30
+                </p>
+            </b>
+            <button> <a href="XF-T30.html"> LEARN MORE </a> </button>
+        </div>
+        <div class="box4">
+            <b>
+                <p> FUJIFILM XF10</p>
+                <button> <a href="XF10.html"> LEARN MORE </a> </button>
+            </b>
+        </div>
+
+
+
+
+
+    </div>
+    <div id="main2">
+
+        <div class="box5">
+            <p> XF33mmF1.4 R LM WR</p>
+            <p>A New Standard Of Image Quality</p>
+            <button> <a href="lens.html"> LEARN MORE </a> </button>
+        </div>
+        <div class="box6">
+            <p>GF35-70mmF4.5-5.6 WR</p>
+            <p>
+                The Gateway to Quality </p>
+            <button><a href="Lens 10.html"> LEARN MORE </a></button>
+        </div>
+
+
+    </div>
+    <footer>
+        <div id="part1" class="footer1">
+            <h3> CONTACT INFORMATION India -:</h3>
+            <p> <b> Main Location(India):</b>Unitech Cyber Park, Unit No. 801-807,
+                8th Floor, Tower C, Sector 39,
+                Gurugram- 122001, Haryana </p>
+            <p> <b>INDIA Tel: +91-(0)124-4325500</b></p>
+            <p><b>INDIA Fax: +91-(0)124-4325555</b></p>
+            <p><b>India Email :</b> (91) india@fujifilm.com </p>
+            <p><b> India Customer Care Email: </b> indiaCustomer@fujicare.com</p>
+            <p id="down"></p>
+
+
+
+        </div>
+        <div id="part2" class="footer1">
+            <h3> CONTACT INFORMATION Global -:</h3>
+            <p> <b> Main Location:</b> 50 Main ST Boston MA </p>
+            <p><b> Global Phone :</b>(555) 555-5555 </p>
+            <p><b> Coustomer Care:</b> (333) 333-3333</p>
+            <p><b>Global Email :</b> (555) global@fujifilm.com </p>
+            <p><b> Customer Care Email: </b> Customer@fujicare.com</p>
+            <p id="down"></p>
+
+
+
+        </div>
+        <div id="part3" class="footer1">
+            <h1>FOLLOW US ON -:</h1>
+            <a href=" https://www.facebook.com/fujifilmXIndia/"> <i class="fab fa-facebook"></i></a>
+            <a href=" https://www.instagram.com/fujifilmxindia/"> <i class="fab fa-instagram"></i></a>
+            <a href=" https://www.youtube.com/channel/UCZvtcRxo82A4-7BQ2T8MOAA"> <i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/visitsaudinow"> <i class="fab fa-twitter"></i></a>
+        </div>
+
+
+    </footer>
+    <div class="lastfooter">
+        <img src="fujilogo.jpg" alt="">
+        <p> copyright@fujifilm india pvt.ltd</p>
+
+    </div>
+
+
+</body>
+
+</html>

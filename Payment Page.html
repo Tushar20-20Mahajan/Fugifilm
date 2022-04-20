@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Payment Form</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Confirm Your Payment</h1>
+        <div class="first-row">
+            <div class="owner">
+                <h3>OWNER NAME</h3>
+                <div class="input-field">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="input-field">
+                    <input type="password">
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="card-number">
+                <h3>CAED NUMBER</h3>
+                <div class="input-field">
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <h3>VALID TILL</h3>
+            <div class="selection">
+                <div class="date">
+                    <select name="months" id="months">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select>
+                    <select name="years" id="years">
+                        <option value="2020">2030</option>
+                        <option value="2019">2029</option>
+                        <option value="2018">2028</option>
+                        <option value="2017">2027</option>
+                        <option value="2016">2026</option>
+                        <option value="2015">2025</option>
+                        <option value="2020">2024</option>
+                        <option value="2020">2023</option>
+                        <option value="2020">2022</option>
+                        <option value="2020">2021</option>
+                    </select>
+                </div>
+                <div class="cards">
+                    <img src="mc.png" alt="">
+                    <img src="vi.png" alt="">
+                    <img src="pp.png" alt="">
+                </div>
+            </div>
+        </div>
+        <a href="thankspage.html">Confirm</a>
+        <a href="#"> Clear All</a>
+    </div>
+
+    <script>
+        // This function clear all the values
+        function clearScreen() {
+            document.getElementById("result").value = "";
+        }
+        window.alert("Safe Payment");
+    </script>
+</body>
+
+</html>

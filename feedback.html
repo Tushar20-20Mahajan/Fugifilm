@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <script src="https://kit.fontawesome.com/fd665e3003.js"> </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        .background {
+            margin: 0px;
+            padding: 0px;
+            background-image: linear-gradient(135deg, black, grey, white, black, grey, white);
+        }
+
+
+
+        #navbar {
+            display: flex;
+            position: sticky;
+            margin: 0px;
+            top: 0px;
+
+        }
+
+        #navbar .logo img {
+            height: 80px;
+            width: 80px;
+        }
+
+        #navbar ul {
+            display: flex;
+            top: 0px;
+            padding: 5px 18px;
+            list-style-type: none;
+
+
+
+        }
+
+        #navbar ul li a {
+            display: block;
+            padding: 3px 19px;
+            text-decoration: none;
+            position: relative;
+            border-radius: 10px;
+            color: black;
+            transition: all 1s ease-in-out;
+
+        }
+
+        #navbar ul li a:hover {
+            transform: scale(1.0);
+            background-color: white;
+
+
+        }
+
+        #navbar::before {
+            top: 0px;
+            margin: 0px;
+
+
+            background-color: black;
+            opacity: 0.4;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            content: "";
+
+
+        }
+
+
+        #navbar input {
+            position: relative;
+            display: block;
+
+            justify-content: center;
+            align-items: center;
+            right: 10px;
+            border-radius: 10px;
+            width: 150%;
+            height: 30px;
+
+
+
+
+
+        }
+
+        #navbar form {
+
+            display: block;
+            margin: auto;
+
+        }
+
+        #navbar .acc {
+            position: relative;
+            display: block;
+            margin: auto;
+            text-decoration: black;
+            color: black;
+
+
+
+        }
+
+        #navbar .acc i {
+            transition: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            text-decoration: black;
+
+
+            left: 0px;
+            font-size: 40px;
+
+
+        }
+
+        #navbar .acc i:hover {
+            transform: scale(1.0);
+
+        }
+
+
+        table {
+            background-image: linear-gradient(white, whitesmoke);
+            display: flex;
+            justify-content: center;
+            box-shadow: 10px 10px 10px 10px black;
+
+
+            width: 50%;
+            align-content: center;
+            margin: 17px auto;
+        }
+
+        label {
+            font-size: 14px;
+            width: 130px;
+            color: #33475b;
+            display: block;
+            float: none;
+            width: auto;
+            font-weight: 500;
+            line-height: 20px;
+            padding-top: 0;
+            margin-bottom: 4px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .input,
+        select {
+            display: inline-block;
+            width: 91%;
+            max-width: 500px;
+            height: 40px;
+            padding: 9px 10px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 22px;
+            color: #33475b;
+            border: 1px solid #cbd6e2;
+            box-sizing: border-box;
+
+            border-radius: 3px;
+        }
+
+
+        footer::before {
+            content: "";
+            background-color: #021214;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-position: center center;
+            z-index: -1;
+            opacity: 0.45;
+
+
+        }
+
+        footer {
+            display: flex;
+
+            top: 0px;
+            position: relative;
+            margin: 0px;
+            width: 100%;
+        }
+
+        .footer1 {
+
+
+            height: 100%;
+            width: 31%;
+            color: black;
+            font-size: 19px;
+            padding: 4px;
+        }
+
+        #part1 {
+            margin-left: 40px;
+        }
+
+        #part2 {
+            margin-left: 60px;
+        }
+
+        #part3 {
+            padding: 60px;
+            text-decoration: underline;
+        }
+
+        i {
+            font-size: 40PX;
+            padding: 17px;
+        }
+
+        #part3 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #part3 a i:hover {
+            transform: scale(1.2);
+        }
+
+        .lastfooter {
+            background-color: black;
+            color: white;
+            display: flex;
+            padding: 10px;
+
+        }
+
+        .lastfooter p {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .lastfooter img {
+            width: 200px;
+            height: 50px;
+        }
+
+        .submit {
+            background: linear-gradient(135deg,grey,white );
+            border: 5px solid black;
+            border-radius: 15px
+            ;
+        }
+
+        .submit:hover {
+            background: linear-gradient(135deg,white ,grey);
+        }
+
+
+        .calculator-grid {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            min-height: 100vh;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+        }
+
+        .calculator-grid>button {
+            cursor: pointer;
+            font-size: 2rem;
+            border: 1px solid white;
+            outline: none;
+            background-color: rgba(255, 255, 255, .75);
+        }
+
+        .calculator-grid>button:hover {
+            background-color: rgba(255, 255, 255, .9);
+        }
+
+        .span-two {
+            grid-column: span 2;
+        }
+
+        .output {
+            grid-column: 1 / -1;
+            background-color: rgba(0, 0, 0, .75);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            flex-direction: column;
+            padding: 10px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .output .previous-operand {
+            color: rgba(255, 255, 255, .75);
+            font-size: 1.5rem;
+        }
+
+        .output .current-operand {
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        @media (min-width:700px) and (max-width:930px) {
+
+
+            html {
+                scroll-behavior: smooth;
+
+            }
+
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+
+
+            #navbar {
+                display: flex;
+                position: sticky;
+                margin: 0px;
+                top: 0px;
+                flex-direction: column;
+
+            }
+
+            #navbar .logo img {
+                height: 80px;
+                width: 80px;
+            }
+
+            #navbar ul {
+                display: flex;
+                top: 0px;
+                padding: 5px 18px;
+                list-style-type: none;
+
+
+
+            }
+
+            #navbar ul li a {
+                display: block;
+                padding: 3px 19px;
+                text-decoration: none;
+                position: relative;
+                border-radius: 10px;
+                color: whitesmoke;
+                transition: all 1s ease-in-out;
+
+            }
+
+            #navbar ul li a:hover {
+                transform: scale(2);
+                background-color: black;
+
+
+            }
+
+            #navbar::before {
+                top: 0px;
+                margin: 0px;
+
+
+                background-color: black;
+                opacity: 0.4;
+                position: absolute;
+                height: 100%;
+                background-position: center center;
+                content: "";
+
+
+
+            }
+
+
+            #navbar input {
+                position: relative;
+                display: block;
+
+                justify-content: center;
+                align-items: center;
+                right: 10px;
+                border-radius: 10px;
+                width: 150%;
+                height: 30px;
+
+
+
+
+
+            }
+
+            #navbar form {
+
+                display: block;
+                margin: auto;
+
+            }
+
+            #navbar .acc {
+                position: relative;
+                display: block;
+                margin: auto;
+                text-decoration: black;
+                color: black;
+
+
+
+            }
+
+            #navbar .acc i {
+                transition: all;
+                transition-duration: 2s;
+                transition-timing-function: ease-in-out;
+                text-decoration: black;
+
+
+                left: 0px;
+                font-size: 40px;
+
+
+            }
+
+            #navbar .acc i:hover {
+                transform: scale(1.5);
+
+            }
+
+            table {
+                background-image: linear-gradient(white, whitesmoke);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                box-shadow: 10px 10px 10px 10px black;
+
+
+                width: 50%;
+                align-content: center;
+                margin: 17px auto;
+            }
+
+            label {
+                font-size: 14px;
+                width: 130px;
+                color: #33475b;
+                display: block;
+                float: none;
+                width: auto;
+                font-weight: 500;
+                line-height: 20px;
+                padding-top: 0;
+                margin-bottom: 4px;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+
+            .input,
+            select {
+                display: inline-block;
+                width: 91%;
+                max-width: 500px;
+                height: 40px;
+                padding: 9px 10px;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 22px;
+                color: #33475b;
+                border: 1px solid #cbd6e2;
+                box-sizing: border-box;
+
+                border-radius: 3px;
+            }
+        }
+
+        @media (min-width:600px) and (max-width:700px) {
+
+            html {
+                scroll-behavior: smooth;
+
+            }
+
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+
+
+            #navbar {
+                display: flex;
+                position: sticky;
+                margin: 0px;
+                top: 0px;
+                flex-direction: column;
+
+            }
+
+            #navbar .logo img {
+                height: 80px;
+                width: 80px;
+            }
+
+            #navbar ul {
+                display: flex;
+                top: 0px;
+                padding: 5px 18px;
+                list-style-type: none;
+
+
+
+            }
+
+            #navbar ul li a {
+                display: block;
+                padding: 3px 19px;
+                text-decoration: none;
+                position: relative;
+                border-radius: 10px;
+                color: whitesmoke;
+                transition: all 1s ease-in-out;
+
+            }
+
+            #navbar ul li a:hover {
+                transform: scale(2);
+                background-color: black;
+
+
+            }
+
+            #navbar::before {
+                top: 0px;
+                margin: 0px;
+
+
+                background-color: black;
+                opacity: 0.4;
+                position: absolute;
+                height: 100%;
+                background-position: center center;
+                content: "";
+                width: 118%;
+
+
+
+            }
+
+
+            #navbar input {
+                position: relative;
+                display: block;
+
+                justify-content: center;
+                align-items: center;
+                right: 10px;
+                border-radius: 10px;
+                width: 150%;
+                height: 30px;
+
+
+
+
+
+            }
+
+            #navbar form {
+
+                display: block;
+                margin: auto;
+
+            }
+
+            #navbar .acc {
+                position: relative;
+                display: block;
+                margin: auto;
+                text-decoration: black;
+                color: black;
+
+
+
+            }
+
+            #navbar .acc i {
+                transition: all;
+                transition-duration: 2s;
+                transition-timing-function: ease-in-out;
+                text-decoration: black;
+
+
+                left: 0px;
+                font-size: 40px;
+
+
+            }
+
+            #navbar .acc i:hover {
+                transform: scale(1.5);
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo"> <img src="Fujifilm_X_series.png" alt=""></div>
+        <ul>
+            <li id="item"><a href="home.html"> HOME</a></li>
+
+            <li id="item"><a href="Product.html"> PRODUCTS</a></li>
+            <li id="item"><a href="#down"> Contact US</a></li>
+            <li id="item"><a href="#"> FEEDBACK & YOUR QUERY</a></li>
+        </ul>
+        <form action="backend.php">
+
+            <input type="search" name="search" id="" placeholder="Type to Search">
+        </form>
+        <a href="#" class="acc"> <i class="far fa-user-circle"></i></a>
+
+    </nav>
+    <div class="background">
+        <table class="form">
+            <form action="">
+                <tr>
+                    <td> <label for="first name">FIRST NAME</label></td>
+                    <td><label for="last name">LAST NAME</label></td>
+                </tr>
+                <tr>
+                    <td><input class="input" type="text" name="first name" id="first name" required></td>
+                    <td><input class="input" type="text" name="last name" id="last name" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="email"> EMAIL</label></td>
+                    <td><label for="phone"> PHONE</label></td>
+
+                </tr>
+                <tr>
+                    <td><input class="input" type="email" name="email" id="email"></td>
+                    <td><input class="input" type="tel" name="phone" id="phone"></td>
+                </tr>
+                <tr>
+                    <td><label for="state"> STATE</label></td>
+                    <td><label for="company">COMPANY</label></td>
+                </tr>
+                <tr>
+                    <td> <select>
+                        <option value="india"> Select</option>
+                            <option value="india"> Haryana </option>
+                            <option value="china"> Punjab </option>
+                            <option value="pakistan"> Himachal Pradesh </option>
+                            <option value="srilanka"> Uttar Pradesh </option>
+                            <option value="bhutan"> Uttarakhand </option>
+                        </select></td>
+                    <td><input class="input" type="text" name="company" id="company"></td>
+                </tr>
+                <tr>
+                    <td>How would you like to be contacted?*
+                    </td>
+
+                </tr>
+                <tr>
+                    <td> <select>
+                        <option value="phone"> Select </option>
+                            <option value="phone"> PHONE </option>
+                            <option value="email"> EMAIL </option>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="nature">NATURE OF FEEDBACK</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="nature" value="compliment" id="compliment">COMPLIMENT</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="nature" value="complaint" id="">COMPLAINT</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="nature" value="query" id="query">QUERY</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="nature" value="other" id="other">OTHER</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><label for="feedback"> to help us serve you better, what would you like to provide
+                            feedback on?*</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="feedback" value="product" id="product">PRODUCT</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="feedback" value="sales" id="sales">SALES</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="feedback" value="billing" id="billing">BILLING</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="feedback" value="deliveries" id="deliveries">DELIVERIES</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        DETAILS OF YOUR FEEDBACK
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea name="write your feedback" id="" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="input submit" type="submit" value="SUBMIT" onclick="clicked()">
+                        <script type="text/javascript">
+                            function clicked() {
+                                alert('your data is submitted');
+                            }
+                        </script>
+                    </td>
+                </tr>
+
+
+            </form>
+        </table>
+
+        
+    <footer>
+        <div id="part1" class="footer1">
+            <h3> CONTACT INFORMATION India -:</h3>
+            <p> <b> Main Location(India):</b>Unitech Cyber Park, Unit No. 801-807,
+                8th Floor, Tower C, Sector 39,
+                Gurugram- 122001, Haryana </p>
+            <p> <b>INDIA Tel: +91-(0)124-4325500</b></p>
+            <p><b>INDIA Fax: +91-(0)124-4325555</b></p>
+            <p><b>India Email :</b> (91) india@fujifilm.com </p>
+            <p><b> India Customer Care Email: </b> indiaCustomer@fujicare.com</p>
+            <p id="down"></p>
+
+
+
+        </div>
+        <div id="part2" class="footer1">
+            <h3> CONTACT INFORMATION Global -:</h3>
+            <p> <b> Main Location:</b> 50 Main ST Boston MA </p>
+            <p><b> Global Phone :</b>(555) 555-5555 </p>
+            <p><b> Coustomer Care:</b> (333) 333-3333</p>
+            <p><b>Global Email :</b> (555) global@fujifilm.com </p>
+            <p><b> Customer Care Email: </b> Customer@fujicare.com</p>
+            <p id="down"></p>
+
+
+
+        </div>
+        <div id="part3" class="footer1">
+            <h1>FOLLOW US ON -:</h1>
+            <a href=" https://www.facebook.com/fujifilmXIndia/"> <i class="fab fa-facebook"></i></a>
+            <a href=" https://www.instagram.com/fujifilmxindia/"> <i class="fab fa-instagram"></i></a>
+            <a href=" https://www.youtube.com/channel/UCZvtcRxo82A4-7BQ2T8MOAA"> <i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/visitsaudinow"> <i class="fab fa-twitter"></i></a>
+        </div>
+
+
+    </footer>
+    <div class="lastfooter">
+        <img src="fujilogo.jpg" alt="">
+        <p> copyright@fujifilm india pvt.ltd</p>
+
+    </div>
+
+
+</body>
+
+</html>

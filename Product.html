@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/fd665e3003.js"> </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Webpage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+        #navbar {
+            display: flex;
+            position: sticky;
+            margin: 0px;
+            top: 0px;
+
+        }
+
+        #navbar .logo img {
+            height: 80px;
+            width: 80px;
+        }
+
+        #navbar ul {
+            display: flex;
+            top: 0px;
+            padding: 5px 18px;
+            list-style-type: none;
+
+
+
+        }
+
+        #navbar ul li a {
+            display: block;
+            padding: 3px 19px;
+            text-decoration: none;
+            position: relative;
+            border-radius: 10px;
+            color: black;
+            transition: all 1s ease-in-out;
+
+        }
+
+        #navbar ul li a:hover {
+            transform: scale(1.0);
+            background-color: white;
+
+
+        }
+
+        #navbar::before {
+            top: 0px;
+            margin: 0px;
+
+
+            background-color: black;
+            opacity: 0.4;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            content: "";
+
+
+        }
+
+
+        #navbar input {
+            position: relative;
+            display: block;
+
+            justify-content: center;
+            align-items: center;
+            right: 10px;
+            border-radius: 10px;
+            width: 150%;
+            height: 30px;
+
+
+
+
+
+        }
+
+        #navbar form {
+
+            display: block;
+            margin: auto;
+
+        }
+
+        #navbar .acc {
+            position: relative;
+            display: block;
+            margin: auto;
+            text-decoration: black;
+            color: black;
+
+
+
+        }
+
+        #navbar .acc i {
+            transition: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            text-decoration: black;
+
+
+            left: 0px;
+            font-size: 40px;
+
+
+        }
+
+        #navbar .acc i:hover {
+            transform: scale(1.0);
+
+        }
+
+        body {
+            background-image: linear-gradient(white, grey, white, grey, white, grey);
+            background-repeat: no-repeat;
+        }
+
+        .button {
+            text-decoration: none;
+            background-image: url("ccc.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 400px;
+            height: 400px;
+            margin-left: 5px;
+            background-size: cover;
+        }
+
+        .button2 {
+            text-decoration: none;
+            background-image: url("bbb.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 400px;
+            height: 400px;
+            margin-left: 5px;
+            background-size: cover;
+        }
+
+        .button3 {
+            text-decoration: none;
+            background-image: url("aaa.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 400px;
+            height: 400px;
+            margin-left: 5px;
+            background-size: cover;
+        }
+
+        .button4 {
+            text-decoration: none;
+            background-image: url("ddd.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 400px;
+            height: 400px;
+            margin-left: 5px;
+            background-size: cover;
+        }
+
+        .button5 {
+            text-decoration: none;
+            background-image: url("eee.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 400px;
+            height: 400px;
+            margin-left: 5px;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .H2 {
+            text-decoration: underline;
+            font-size: 60px;
+            margin-bottom: 1.5vw;
+            font-family: fantasy;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 45%;
+        }
+
+        .XF10 {
+            font-size: 60px;
+        }
+
+        .XF33 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            margin-left: -710px;
+        }
+
+        .sensor {
+            color: rgb(85, 64, 64);
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .APS {
+            color: black;
+            font-size: 25px;
+            margin-bottom: 3vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .col {
+
+            padding: 35px;
+            margin-left: 60px;
+            margin-top: -70px;
+
+        }
+
+        .paragraph {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 0.5vw;
+            font-family: serif;
+
+        }
+
+        .button10 {
+            border: none;
+            background-image: linear-gradient(135deg, white, black, white, black, white, black, white, black, white, black, white, white, white, white, white, white, white, white, white, white, white, white, black, white, black, white, black, white, black, white, black);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: black;
+            font-weight: bolder;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button11 {
+            background-color: white;
+            color: black;
+            border: 5px solid black;
+        }
+
+        .button11:hover {
+            background: linear-gradient(-135deg, white, black, white, black, white, black, white, black, white, grey, white, grey, white, grey, grey, grey, grey, grey, grey, grey, grey, white, grey, white, black, white, black, white, black, white, black);
+        }
+
+
+
+        .popupcalculator {
+            font-family: 'Open Sans', sans-serif;
+            background-color: black;
+        }
+
+        #container1 {
+            width: 500px;
+            height: 550px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bgImg.jpg);
+            margin: 20px auto;
+        }
+
+        #calculator {
+            width: 320px;
+            height: 520px;
+            background-color: #eaedef;
+            margin: 0 auto;
+            top: 20px;
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #result {
+            height: 120px;
+        }
+
+        #history {
+            text-align: right;
+            height: 20px;
+            margin: 0 20px;
+            padding-top: 20px;
+            font-size: 15px;
+            color: #919191;
+        }
+
+        #output {
+            text-align: right;
+            height: 60px;
+            margin: 10px 20px;
+            font-size: 30px;
+        }
+
+        #keyboard {
+            height: 400px;
+        }
+
+        .operator,
+        .number,
+        .empty {
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            float: left;
+            border-radius: 50%;
+            border-width: 0;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .number,
+        .empty {
+            background-color: #eaedef;
+        }
+
+        .number,
+        .operator {
+            cursor: pointer;
+        }
+
+        .operator:active,
+        .number:active {
+            font-size: 13px;
+        }
+
+        .operator:focus,
+        .number:focus,
+        .empty:focus {
+            outline: 0;
+        }
+
+        button:nth-child(4) {
+            font-size: 20px;
+            background-color: #20b2aa;
+        }
+
+        button:nth-child(8) {
+            font-size: 20px;
+            background-color: #ffa500;
+        }
+
+        button:nth-child(12) {
+            font-size: 20px;
+            background-color: #f08080;
+        }
+
+        button:nth-child(16) {
+            font-size: 20px;
+            background-color: #7d93e0;
+        }
+
+        button:nth-child(20) {
+            font-size: 20px;
+            background-color: #9477af;
+        }
+
+
+        :root {
+            --modal-duration: 1s;
+            --modal-color: #428bca;
+        }
+
+        .popupcalculator {
+            font-family: Arial, Helvetica, sans-serif;
+            background: transparent;
+            font-size: 17px;
+            line-height: 1.6;
+            display: flex;
+            height: 5vh;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .button101 {
+            border: none;
+            background-image: linear-gradient(135deg, white, black, white, black, white, black, white, black, white, black, white, white, white, white, white, white, white, white, white, white, white, white, black, white, black, white, black, white, black, white, black);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: black;
+            font-weight: bolder;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button101 {
+            background-color: white;
+            color: black;
+            border: 5px solid black;
+        }
+
+        .button101:hover {
+            background: linear-gradient(-135deg, white, black, white, black, white, black, white, black, white, grey, white, grey, white, grey, grey, grey, grey, grey, grey, grey, grey, white, grey, white, black, white, black, white, black, white, black);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            margin: 10% auto;
+            width: 33%;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+            animation-name: modalopen;
+            animation-duration: var(--modal-duration);
+        }
+
+
+
+        .close {
+            color: #ccc;
+            float: right;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @keyframes modalopen {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer::before {
+            content: "";
+            background-color: #021214;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-position: center center;
+            z-index: -1;
+            opacity: 0.45;
+
+
+        }
+
+        footer {
+            display: flex;
+
+            top: 0px;
+            position: relative;
+            margin: 0px;
+            width: 100%;
+        }
+
+        .footer1 {
+
+
+            height: 100%;
+            width: 31%;
+            color: black;
+            font-size: 19px;
+            padding: 4px;
+        }
+
+        .footer1 {
+
+
+            height: 100%;
+            width: 31%;
+            color: black;
+            font-size: 19px;
+            padding: 4px;
+        }
+
+        #part1 {
+            margin-left: 40px;
+        }
+
+        #part2 {
+            margin-left: 60px;
+        }
+
+        #part3 {
+            padding: 60px;
+            text-decoration: underline;
+        }
+
+        i {
+            font-size: 40PX;
+            padding: 17px;
+        }
+
+        #part3 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #part3 a i:hover {
+            transform: scale(1.2);
+        }
+
+        .lastfooter {
+            background-color: black;
+            color: white;
+            display: flex;
+            padding: 10px;
+        }
+
+        .lastfooter p {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .lastfooter img {
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo"> <img src="Fujifilm_X_series.png" alt=""></div>
+        <ul>
+            <li id="item"><a href="home.html"> HOME</a></li>
+
+            <li id="item"><a href="Product.html"> PRODUCTS</a></li>
+            <li id="item"><a href="#down"> Contact US</a></li>
+            <li id="item"><a href="feedback.html"> FEEDBACK & YOUR QUERY</a></li>
+        </ul>
+        <form action="backend.php">
+
+            <input type="search" name="search" id="" placeholder="Type to Search">
+        </form>
+        <a href="loginfoem.html" class="acc"> <i class="far fa-user-circle"></i></a>
+    </nav>
+    <div class="container">
+        <hr color="black" width="90%">
+        <h2 class="H2"> CAMERAS </h2>
+    </div>
+    <div>
+        <pre class="paragraph">
+            The central themes of the GFX & X Series are simplicity and elegance;
+            the camera is a precision instrument, but one that’s combined with a functional beauty.
+        </pre>
+        <hr color="black" width="90%" te>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    <div class="XF10">XF-T30</div>
+                </th>
+                <th>
+
+                </th>
+
+            </tr>
+            <tr>
+                <td>
+                    <a href="XF-T30.html"><button class="button2"></button></a>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="col">
+                            <pre class="sensor">Sensor</pre>
+                            <pre class="APS">APS-C“X-Trans*1 CMOS 4″</pre>
+                        </div>
+                        <div class="col">
+                            <pre class="sensor ">Efective Pixles</pre>
+                            <pre class="APS">26M</pre>
+                        </div>
+                        <div class="col">
+                            <pre class="sensor">LCD Monitor</pre>
+                            <pre class="APS">3.0-inch</pre>
+                        </div>
+                        <div class="col">
+                            <pre class="sensor">Sensitivity</pre>
+                            <pre class="APS">ISO 51200*2</pre>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class="XF10">GFX 50S</div>
+                </th>
+                <th>
+
+                </th>
+
+            </tr>
+            <tr>
+                <td>
+                    <a href="GFX 50S.html"><button class="button3"></button></a>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="col">
+                            <pre class="sensor">Sensor</pre>
+                            <pre class="APS">43.8mm x 32.9mm</pre>
+                        </div>
+                        <div class="col">
+                            <pre class="sensor ">Efective Pixles</pre>
+                            <pre class="APS">51.4M</pre>
+                        </div>
+                        <div class="col">
+                            <pre class="sensor">Mount</pre>
+                            <pre class="APS">G Mount</pre>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class="XF10">XF10</div>
+                </th>
+                <th>
+
+                </th>
+
+            </tr>
+            <tr>
+                <td>
+                    <a href="XF10.html"><button class="button"></button></a>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="col">
+                            <pre class="sensor">Sensor</pre>
+                            <pre class="APS">APS-C CMOS</pre>
+                        </div>
+                        <div class="col">
+                            <pre class="sensor ">Efective Pixles</pre>
+                            <pre class="APS">24M</pre>
+                        </div>
+                        <div class="col">
+                            <pre class="sensor">LCD Monitor</pre>
+                            <pre class="APS">3.0-inch</pre>
+                        </div>
+                        <div class="col">
+                            <pre class="sensor">Sensitivity</pre>
+                            <pre class="APS">ISO 51200*1</pre>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="container">
+            <hr color="black" width="90%">
+            <h2 class="H2"> LENSES </h2>
+        </div>
+        <div>
+            <pre class="paragraph">
+                The vision of the X Series, the choice for X Series owners.
+                A collection of creativity-oriented lenses, which complement the X-Trans CMOS sensor perfectly and
+                eliminate the low-pass filter for ultimate sharpness.
+            </pre>
+            <hr color="black" width="90%">
+        </div>
+        <div>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th colspan="2">
+                        <div class="XF33"> XF33mmF1.4 R LM WR</div>
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="lens.html"><button class="button4"></button></a>
+                    </td>
+                    <td>
+                        <div class="container">
+                            <div class="col">
+                                <pre class="sensor">Focal Length</pre>
+                                <pre class="APS">f=33mm(50mm)</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor ">Max-Min.Aperture</pre>
+                                <pre class="APS">(F1.4)-(F16)</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor">Max.Magnification</pre>
+                                <pre class="APS">0.15x</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor">Focus range</pre>
+                                <pre class="APS">30cm-∞</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor">External Dimensions:</pre>
+                                <pre class="APS">Ø67mm x 73.5mm</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor">Weight*2 (approx.)</pre>
+                                <pre class="APS">360g</pre>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <div class="XF33">GF35-70mmF4.5-5.6 WR</div>
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="Lens 10.html"><button class="button5"></button></a>
+                    </td>
+                    <td>
+                        <div class="container">
+                            <div class="col">
+                                <pre class="sensor">Focal Length</pre>
+                                <pre class="APS">f=35-70mm(28-55mm)</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor ">Max-Min.Aperture</pre>
+                                <pre class="APS">(F4.5-5.6)-([T] 0.28x)</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor">Min.Aperture</pre>
+                                <pre class="APS">[T] 0.28x</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor">Focus range</pre>
+                                <pre class="APS">35cm-∞</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor">External Dimensions:</pre>
+                                <pre class="APS">Ø84.9mm x 73.9mm</pre>
+                            </div>
+                            <div class="col">
+                                <pre class="sensor">Weight*2 (approx.)</pre>
+                                <pre class="APS">390g</pre>
+                            </div>
+                    </td>
+                </tr>
+            </table>
+            <hr color="black" width="100%">
+        </div>
+
+    </div>
+    <div class="popupcalculator">
+        <button id="modal-btn" class="button101">!!Click Here To Open Calculator!!</button>
+
+        <div id="my-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="container1">
+                    <div id="calculator">
+                        <div id="result">
+                            <div id="history">
+                                <p id="history-value"></p>
+                            </div>
+                            <div id="output">
+                                <p id="output-value"></p>
+                            </div>
+                        </div>
+                        <div id="keyboard">
+                            <button class="operator" id="clear">C</button>
+                            <button class="operator" id="backspace">CE</button>
+                            <button class="operator" id="%">%</button>
+                            <button class="operator" id="/">&#247;</button>
+                            <button class="number" id="7">7</button>
+                            <button class="number" id="8">8</button>
+                            <button class="number" id="9">9</button>
+                            <button class="operator" id="*">&times;</button>
+                            <button class="number" id="4">4</button>
+                            <button class="number" id="5">5</button>
+                            <button class="number" id="6">6</button>
+                            <button class="operator" id="-">-</button>
+                            <button class="number" id="1">1</button>
+                            <button class="number" id="2">2</button>
+                            <button class="number" id="3">3</button>
+                            <button class="operator" id="+">+</button>
+                            <button class="empty" id="empty"></button>
+                            <button class="number" id="0">0</button>
+                            <button class="empty" id="empty"></button>
+                            <button class="operator" id="=">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const modal = document.querySelector('#my-modal');
+            const modalBtn = document.querySelector('#modal-btn');
+            const closeBtn = document.querySelector('.close');
+
+            // Events
+            modalBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            window.addEventListener('click', outsideClick);
+
+            // Open
+            function openModal() {
+                modal.style.display = 'block';
+            }
+
+            // Close
+            function closeModal() {
+                modal.style.display = 'none';
+            }
+
+            // Close If Outside Click
+            function outsideClick(e) {
+                if (e.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+
+            function getHistory() {
+                return document.getElementById("history-value").innerText;
+            }
+            function printHistory(num) {
+                document.getElementById("history-value").innerText = num;
+            }
+            function getOutput() {
+                return document.getElementById("output-value").innerText;
+            }
+            function printOutput(num) {
+                if (num == "") {
+                    document.getElementById("output-value").innerText = num;
+                }
+                else {
+                    document.getElementById("output-value").innerText = getFormattedNumber(num);
+                }
+            }
+            function getFormattedNumber(num) {
+                if (num == "-") {
+                    return "";
+                }
+                var n = Number(num);
+                var value = n.toLocaleString("en");
+                return value;
+            }
+            function reverseNumberFormat(num) {
+                return Number(num.replace(/,/g, ''));
+            }
+            var operator = document.getElementsByClassName("operator");
+            for (var i = 0; i < operator.length; i++) {
+                operator[i].addEventListener('click', function () {
+                    if (this.id == "clear") {
+                        printHistory("");
+                        printOutput("");
+                    }
+                    else if (this.id == "backspace") {
+                        var output = reverseNumberFormat(getOutput()).toString();
+                        if (output) {//if output has a value
+                            output = output.substr(0, output.length - 1);
+                            printOutput(output);
+                        }
+                    }
+                    else {
+                        var output = getOutput();
+                        var history = getHistory();
+                        if (output == "" && history != "") {
+                            if (isNaN(history[history.length - 1])) {
+                                history = history.substr(0, history.length - 1);
+                            }
+                        }
+                        if (output != "" || history != "") {
+                            output = output == "" ? output : reverseNumberFormat(output);
+                            history = history + output;
+                            if (this.id == "=") {
+                                var result = eval(history);
+                                printOutput(result);
+                                printHistory("");
+                            }
+                            else {
+                                history = history + this.id;
+                                printHistory(history);
+                                printOutput("");
+                            }
+                        }
+                    }
+
+                });
+            }
+            var number = document.getElementsByClassName("number");
+            for (var i = 0; i < number.length; i++) {
+                number[i].addEventListener('click', function () {
+                    var output = reverseNumberFormat(getOutput());
+                    if (output != NaN) { //if output is a number
+                        output = output + this.id;
+                        printOutput(output);
+                    }
+                });
+            }
+        </script>
+    </div>
+    <div>
+        <a href="add to cart.html"><button class="button10 button11">!!BUY NOW THE EXCLISIVE RANGE OF CAMERAS AND
+                LENSES!!</button></a>
+    </div>
+    <footer>
+        <div id="part1" class="footer1">
+            <h3> CONTACT INFORMATION India -:</h3>
+            <p> <b> Main Location(India):</b>Unitech Cyber Park, Unit No. 801-807,
+                8th Floor, Tower C, Sector 39,
+                Gurugram- 122001, Haryana </p>
+            <p> <b>INDIA Tel: +91-(0)124-4325500</b></p>
+            <p><b>INDIA Fax: +91-(0)124-4325555</b></p>
+            <p><b>India Email :</b> (91) india@fujifilm.com </p>
+            <p><b> India Customer Care Email: </b> indiaCustomer@fujicare.com</p>
+            <p id="down"></p>
+
+
+        </div>
+        <div id="part2" class="footer1">
+            <h3> CONTACT INFORMATION Global -:</h3>
+            <p> <b> Main Location:</b> 50 Main ST Boston MA </p>
+            <p><b> Global Phone :</b>(555) 555-5555 </p>
+            <p><b> Coustomer Care:</b> (333) 333-3333</p>
+            <p><b>Global Email :</b> (555) global@fujifilm.com </p>
+            <p><b> Customer Care Email: </b> Customer@fujicare.com</p>
+            <p id="down"></p>
+        </div>
+        <div id="part3" class="footer1">
+            <h1>FOLLOW US ON -:</h1>
+            <a href=" https://www.facebook.com/fujifilmXIndia/"> <i class="fab fa-facebook"></i></a>
+            <a href=" https://www.instagram.com/fujifilmxindia/"> <i class="fab fa-instagram"></i></a>
+            <a href=" https://www.youtube.com/channel/UCZvtcRxo82A4-7BQ2T8MOAA"> <i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/visitsaudinow"> <i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <div class="lastfooter">
+        <img src="fujilogo.jpg" alt="">
+        <p> copyright@fujifilm india pvt.ltd</p>
+
+    </div>
+
+</body>
+
+</html>

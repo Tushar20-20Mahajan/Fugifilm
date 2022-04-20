@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/fd665e3003.js"> </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+        #navbar {
+            display: flex;
+            position: sticky;
+            margin: 0px;
+            top: 0px;
+
+        }
+
+        #navbar .logo img {
+            height: 80px;
+            width: 80px;
+        }
+
+        #navbar ul {
+            display: flex;
+            top: 0px;
+            padding: 5px 18px;
+            list-style-type: none;
+
+
+
+        }
+
+        #navbar ul li a {
+            display: block;
+            padding: 3px 19px;
+            text-decoration: none;
+            position: relative;
+            border-radius: 10px;
+            color: black;
+            transition: all 1s ease-in-out;
+
+        }
+
+        #navbar ul li a:hover {
+            transform: scale(1.0);
+            background-color: white;
+
+
+        }
+
+        #navbar::before {
+            top: 0px;
+            margin: 0px;
+
+
+            background-color: black;
+            opacity: 0.4;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            content: "";
+
+
+        }
+
+
+        #navbar input {
+            position: relative;
+            display: block;
+
+            justify-content: center;
+            align-items: center;
+            right: 10px;
+            border-radius: 10px;
+            width: 150%;
+            height: 30px;
+
+
+
+
+
+        }
+
+        #navbar form {
+
+            display: block;
+            margin: auto;
+
+        }
+
+        #navbar .acc {
+            position: relative;
+            display: block;
+            margin: auto;
+            text-decoration: black;
+            color: black;
+
+
+
+        }
+
+        #navbar .acc i {
+            transition: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            text-decoration: black;
+
+
+            left: 0px;
+            font-size: 40px;
+
+
+        }
+
+        #navbar .acc i:hover {
+            transform: scale(1.0);
+
+        }
+
+        .navs {
+            border: 0px black;
+            background-image: url("A.png");
+            background-size: cover;
+            width: 100%;
+            height: 600px;
+            background-repeat: no-repeat;
+            margin-left: 0px;
+            margin-top: 0px;
+            display: flex;
+        }
+
+        .H2 {
+            font-size: 60px;
+            margin-bottom: 1.5vw;
+            font-family: fantasy;
+            display: flex;
+            margin-left: 600px;
+        }
+
+        .Paragraph {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 0.5vw;
+            font-family: serif;
+            margin-left: 140px;
+        }
+
+        .h1 {
+            text-align: center;
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: underline;
+        }
+
+        .sensor {
+            color: gray;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .APS {
+            color: black;
+            font-size: 30px;
+            margin-bottom: 3vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .row {
+            display: flex;
+            padding: 10px;
+            margin-left: 40px;
+            margin-top: 3px;
+
+        }
+
+        .col {
+
+            padding: 55px;
+            margin-left: 60px;
+            margin-top: -70px;
+
+        }
+
+        .row1 {
+            display: flex;
+            padding: 10px;
+            margin-left: 40px;
+            margin-top: 3px;
+
+        }
+
+        .button {
+            text-decoration: none;
+            background-image: url("B.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            width: 900px;
+            height: 1000px;
+            background-size: cover;
+        }
+
+        .pre1 {
+            color: black;
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 30px;
+        }
+
+        .pre2 {
+            color: black;
+            font-size: 17px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: -30px;
+            margin-top: -20px;
+
+        }
+
+        .pre3 {
+            color: black;
+            font-size: 17px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: -70px;
+            margin-top: -20px;
+
+        }
+
+        .pre4 {
+            color: black;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 30px;
+        }
+
+        .button1 {
+            text-decoration: none;
+            background: transparent;
+            color: black;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            margin-left: 400px;
+            margin-top: -20px;
+
+        }
+
+        .button1:hover {
+            color: black;
+            background-color: rgb(105, 99, 99);
+        }
+
+        .button2 {
+            text-decoration: none;
+            background-image: url("C.png");
+            color: rgb(255, 246, 246);
+            font-size: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            width: 900px;
+            height: 600px;
+            background-size: cover;
+            margin-left: 20px;
+        }
+
+        .button3 {
+            text-decoration: none;
+            background: transparent;
+            color: black;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            margin-left: 375px;
+            margin-top: -20px;
+        }
+
+        .button3:hover {
+            color: black;
+            background-color: rgb(105, 99, 99);
+        }
+
+        .button4 {
+            text-decoration: none;
+            background-image: url("D.png");
+            color: black;
+            font-size: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            width: 1000px;
+            height: 700px;
+            background-size: cover;
+        }
+
+        .button5 {
+            text-decoration: none;
+            background: transparent;
+            color: black;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            margin-left: 325px;
+            margin-top: -20px;
+        }
+
+        .button5:hover {
+            color: black;
+            background-color: rgb(105, 99, 99);
+        }
+
+        .button6 {
+            text-decoration: none;
+            background-image: url("E.png");
+            color: black;
+            font-size: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            width: 875px;
+            height: 360px;
+            background-size: cover;
+            margin-left: 30px;
+        }
+
+        .button7 {
+            text-decoration: none;
+            background-image: url("F.png");
+            color: black;
+            font-size: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            width: 910px;
+            height: 608px;
+            background-size: cover;
+            margin-left: 30px;
+        }
+
+        .bttn1 {
+            text-decoration: none;
+            background-image: url("G.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+            background-size: cover;
+            margin-left: 5px;
+        }
+
+        .bttn2 {
+            text-decoration: none;
+            background-image: url("H.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+            background-size: cover;
+            margin-left: 5px;
+        }
+
+        .bttn3 {
+            text-decoration: none;
+            background-image: url("I.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+            margin-left: 5px;
+            background-size: cover;
+
+        }
+
+        .bttn4 {
+            text-decoration: none;
+            background-image: url("J.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+            background-size: cover;
+            margin-left: 5px;
+        }
+
+        .bttn5 {
+            text-decoration: none;
+            background-image: url("K.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+            background-size: cover;
+            margin-left: 5px;
+        }
+
+        .bttn6 {
+            text-decoration: none;
+            background-image: url("L.png");
+            color: black;
+            font-size: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+            margin-left: 5px;
+            background-size: cover;
+
+        }
+
+        .H3 {
+
+            font-size: 60px;
+            margin-bottom: 1.5vw;
+            font-family: fantasy;
+            display: flex;
+            margin-left: 650px;
+        }
+
+        .container {
+            border: 1px solid white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .p1 {
+            font-size: 50px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            text-decoration: underline;
+        }
+
+        footer::before {
+            content: "";
+            background-color: #021214;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-position: center center;
+            z-index: -1;
+            opacity: 0.45;
+
+
+        }
+
+        footer {
+            display: flex;
+
+            top: 0px;
+            position: relative;
+            margin: 0px;
+            width: 100%;
+        }
+
+        .footer1 {
+
+
+            height: 100%;
+            width: 31%;
+            color: black;
+            font-size: 19px;
+            padding: 4px;
+        }
+
+        #part1 {
+            margin-left: 40px;
+        }
+
+        #part2 {
+            margin-left: 60px;
+        }
+
+        #part3 {
+            padding: 60px;
+            text-decoration: underline;
+        }
+
+        i {
+            font-size: 40PX;
+            padding: 17px;
+        }
+
+        #part3 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #part3 a i:hover {
+            transform: scale(1.2);
+        }
+
+        .lastfooter {
+            background-color: black;
+            color: white;
+            display: flex;
+            padding: 10px;
+
+        }
+
+        .lastfooter p {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .lastfooter img {
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XF10</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo"> <img src="Fujifilm_X_series.png" alt=""></div>
+        <ul>
+            <li id="item"><a href="home.html"> HOME</a></li>
+
+            <li id="item"><a href="Product.html"> PRODUCTS</a></li>
+            <li id="item"><a href="#down"> Contact US</a></li>
+            <li id="item"><a href="feedback.html"> FEEDBACK & YOUR QUERY</a></li>
+        </ul>
+        <form action="backend.php">
+
+            <input type="search" name="search" id="" placeholder="Type to Search">
+        </form>
+        <a href="loginfoem.html" class="acc"> <i class="far fa-user-circle"></i></a>
+
+    </nav>
+    <div>
+        <nav class="navs"></nav>
+    </div>
+    <div class="container">
+        <h2 class="H2"> Find New Life </h2>
+    </div>
+    <div class="container">
+        <pre class="Paragraph">
+            FUJIFILM XF10 is a premium compact digital camera with a high quality FUJINON 18.5mm F2.8 fixed lens. The camera features an
+            APS-C sized sensor which is 14 times larger than the sensor in a standard smartphone. The FUJIFILM XF10 includes all the hallmarks
+            of the X Series system, combining simple manual operation with superior image quality and versatile picture-taking options.
+        </pre>
+    </div>
+    <div>
+        <pre class="h1">Modle Name -: FUJIFILM XF10</pre>
+    </div>
+    <div class="container">
+        <div class="col">
+            <pre class="sensor">Sensor</pre>
+            <pre class="APS">APS-C CMOS</pre>
+        </div>
+        <div class="col">
+            <pre class="sensor ">Efective Pixles</pre>
+            <pre class="APS">24M</pre>
+        </div>
+        <div class="col">
+            <pre class="sensor">LCD Monitor</pre>
+            <pre class="APS">3.0-inch</pre>
+        </div>
+        <div class="col">
+            <pre class="sensor">Sensitivity</pre>
+            <pre class="APS">ISO 51200*1</pre>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col1">
+            <button class="button"></button>
+        </div>
+        <div>
+            <pre class="pre1">STYLE</pre>
+            <pre class="pre2">
+            Despite its pocketable size and minimal weight of only
+            280g, thanks to the high quality components and new
+            functionality, the FUJIFILM XF10 is the perfect companion
+            or smartphone users and photo enthusiasts alike.
+        </pre>
+            <a href="https://fujifilm-x.com/en-in/products/cameras/xf10/feature-style/"><button class="button1">LEARN
+                    MORE</button></a>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="col1">
+            <pre class="pre1">IMAGING</pre>
+            <pre class="pre3">
+                Equipped with an APS-C sized sensor, the FUJIFILM XF10
+                has superior image quality and wide dynamic range. It
+                produces sharp, high resolution images that are certain to
+                fulfill the demands of any type of photographer.
+            </pre>
+            <a href="https://fujifilm-x.com/en-in/products/cameras/xf10/feature-imaging/"><button class="button3">LEARN
+                    MORE</button></a>
+        </div>
+        <div class="col1">
+            <button class="button2"></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col1">
+            <button class="button4"></button>
+        </div>
+        <div>
+            <pre class="pre1">FRAMING</pre>
+            <pre class="pre2">
+            The 18.5mmF2.8 FUJINON lens,  
+            equivalent to 28mm on 35mm format,
+            covers a wide range of subjects from
+            landscapes to snapshots.
+        </pre>
+            <a href="https://fujifilm-x.com/en-in/products/cameras/xf10/feature-framing/"><button class="button5">LEARN
+                    MORE</button></a>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="col1">
+            <pre class="pre4">OPERATION & CONTROL LAYOUT</pre>
+            <pre class="pre3">
+                The FUJIFILM XF10 includes all the hallmarks of the X
+                Series system, combining simple manual operation with
+                superior image quality and versatile picture-taking
+                options.
+            </pre>
+            <a href="https://fujifilm-x.com/en-in/products/cameras/xf10/feature-operation-control-layout/"><button
+                    class="button3">LEARN MORE</button></a>
+        </div>
+        <div class="col1">
+            <button class="button6"></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col1">
+            <button class="button7"></button>
+        </div>
+        <div>
+            <pre class="pre1">FUNCTION</pre>
+            <pre class="pre2">
+            The FUJIFILM XF10 is the first X Series
+            camera to feature a number of new
+            functions. It has an updated way to
+            automatically transfer images to a
+            smartphone and the “SNAPSHOT”,
+            which presets the focus and aperture to
+            2m/F8 or 5m/F5.6.
+        </pre>
+            <a href="https://fujifilm-x.com/en-in/products/cameras/xf10/feature-function/"><button class="button5">LEARN
+                    MORE</button></a>
+        </div>
+
+    </div>
+    <div class="container">
+        <p class="p1"> X Stories --: </p>
+    </div>
+    <div>
+        <div class="container">
+            <a href="https://fujifilm-x.com/en-in/stories/personal-best-vol-33-ivan-joshua-loh/"><button
+                    class="bttn1"></button></a>
+            <a href="https://fujifilm-x.com/en-in/stories/small-smart-sympathetic-xf10/"><button
+                    class="bttn2"></button></a></button>
+            <a href="https://fujifilm-x.com/en-in/stories/xf10-promotional-video/"><button class="bttn3"></button></a>
+        </div>
+    </div>
+    <div class="container">
+        <a href="https://fujifilm-x.com/en-in/stories/the-world-of-film-simulation-episode-6/"><button
+                class="bttn4"></button></a>
+        <a href="https://fujifilm-x.com/en-in/stories/the-world-of-film-simulation-episode-5/"><button
+                class="bttn5"></button></a></button>
+        <a href="https://fujifilm-x.com/en-in/stories/the-world-of-film-simulation-episode-4/"><button
+                class="bttn6"></button></a>
+    </div>
+    <footer>
+        <div id="part1" class="footer1">
+            <h3> CONTACT INFORMATION India -:</h3>
+            <p> <b> Main Location(India):</b>Unitech Cyber Park, Unit No. 801-807,
+                8th Floor, Tower C, Sector 39,
+                Gurugram- 122001, Haryana </p>
+            <p> <b>INDIA Tel: +91-(0)124-4325500</b></p>
+            <p><b>INDIA Fax: +91-(0)124-4325555</b></p>
+            <p><b>India Email :</b> (91) india@fujifilm.com </p>
+            <p><b> India Customer Care Email: </b> indiaCustomer@fujicare.com</p>
+            <p id="down"></p>
+
+
+
+        </div>
+        <div id="part2" class="footer1">
+            <h3> CONTACT INFORMATION Global -:</h3>
+            <p> <b> Main Location:</b> 50 Main ST Boston MA </p>
+            <p><b> Global Phone :</b>(555) 555-5555 </p>
+            <p><b> Coustomer Care:</b> (333) 333-3333</p>
+            <p><b>Global Email :</b> (555) global@fujifilm.com </p>
+            <p><b> Customer Care Email: </b> Customer@fujicare.com</p>
+            <p id="down"></p>
+
+
+
+        </div>
+        <div id="part3" class="footer1">
+            <h1>FOLLOW US ON -:</h1>
+            <a href=" https://www.facebook.com/fujifilmXIndia/"> <i class="fab fa-facebook"></i></a>
+            <a href=" https://www.instagram.com/fujifilmxindia/"> <i class="fab fa-instagram"></i></a>
+            <a href=" https://www.youtube.com/channel/UCZvtcRxo82A4-7BQ2T8MOAA"> <i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/visitsaudinow"> <i class="fab fa-twitter"></i></a>
+        </div>
+
+
+    </footer>
+    <div class="lastfooter">
+        <img src="fujilogo.jpg" alt="">
+        <p> copyright@fujifilm india pvt.ltd</p>
+
+    </div>
+</body>
+
+</html>

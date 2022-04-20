@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <script src="https://kit.fontawesome.com/fd665e3003.js"> </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+
+    #navbar {
+      display: flex;
+      position: sticky;
+      margin: 0px;
+      top: 0px;
+
+    }
+
+    #navbar .logo img {
+      height: 80px;
+      width: 80px;
+    }
+
+    #navbar ul {
+      display: flex;
+      top: 0px;
+      padding: 5px 18px;
+      list-style-type: none;
+
+
+
+    }
+
+    #navbar ul li a {
+      display: block;
+      padding: 3px 19px;
+      text-decoration: none;
+      position: relative;
+      border-radius: 10px;
+      color: black;
+      transition: all 1s ease-in-out;
+
+    }
+
+    #navbar ul li a:hover {
+      transform: scale(1.0);
+      background-color: white;
+
+
+    }
+
+    #navbar::before {
+      top: 0px;
+      margin: 0px;
+
+
+      background-color: black;
+      opacity: 0.4;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      content: "";
+
+
+    }
+
+
+    #navbar input {
+      position: relative;
+      display: block;
+
+      justify-content: center;
+      align-items: center;
+      right: 10px;
+      border-radius: 10px;
+      width: 150%;
+      height: 30px;
+
+
+
+
+
+    }
+
+    #navbar form {
+
+      display: block;
+      margin: auto;
+
+    }
+
+    #navbar .acc {
+      position: relative;
+      display: block;
+      margin: auto;
+      text-decoration: black;
+      color: black;
+
+
+
+    }
+
+    #navbar .acc i {
+      transition: all;
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
+      text-decoration: black;
+
+
+      left: 0px;
+      font-size: 40px;
+
+
+    }
+
+    #navbar .acc i:hover {
+      transform: scale(1.0);
+
+    }
+
+    .Myslideshow {
+      margin-left: 0px;
+      margin-top: 0px;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      width: 100%;
+    }
+
+    .slider {
+      width: 1510px;
+      height: 750px;
+      overflow: hidden;
+    }
+
+    .slides {
+      width: 800%;
+      height: 500px;
+      display: flex;
+    }
+
+    .slides input {
+      display: none;
+    }
+
+    .slide {
+      width: 20%;
+      transition: 2s;
+    }
+
+    .slide img {
+      width: 1600px;
+      height: 800px;
+    }
+
+    .navigation-manual {
+      position: absolute;
+      width: 1500px;
+      margin-top: 200px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .manual-btn {
+      border: 2px solid #2e6366;
+      padding: 10px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    .manual-btn:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    .manual-btn:hover {
+      background: #2e6366;
+    }
+
+    #radio1:checked~.first {
+      margin-left: 0;
+    }
+
+    #radio2:checked~.first {
+      margin-left: -20%;
+    }
+
+    #radio3:checked~.first {
+      margin-left: -40%;
+    }
+
+    #radio4:checked~.first {
+      margin-left: -60%;
+    }
+
+    .navigation-auto {
+      position: absolute;
+      display: flex;
+      width: 1500px;
+      justify-content: center;
+      margin-top: 700px;
+    }
+
+    .navigation-auto div {
+      border: 2px solid #2e6366;
+      padding: 10px;
+      border-radius: 15px;
+      transition: 1s;
+    }
+
+    .navigation-auto div:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    #radio1:checked~.navigation-auto .auto-btn1 {
+      background: #2e6366;
+    }
+
+    #radio2:checked~.navigation-auto .auto-btn2 {
+      background: #2e6366;
+    }
+
+    #radio3:checked~.navigation-auto .auto-btn3 {
+      background: #2e6366;
+    }
+
+    #radio4:checked~.navigation-auto .auto-btn4 {
+      background: #2e6366;
+    }
+
+    .H2 {
+
+      font-size: 60px;
+      margin-bottom: 1.5vw;
+      font-family: fantasy;
+      display: flex;
+      margin-left: 550px;
+    }
+
+    .Paragraph {
+      text-align: center;
+      font-size: 17px;
+      margin-bottom: 0.5vw;
+      font-family: serif;
+      margin-left: 70px;
+    }
+
+    .h1 {
+      text-align: center;
+      font-size: 40px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-decoration: underline;
+    }
+
+    .sensor {
+      color: gray;
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    .APS {
+      color: black;
+      font-size: 30px;
+      margin-bottom: 3vw;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .row {
+      display: flex;
+      padding: 10px;
+      margin-left: 200px;
+      margin-top: 3px;
+
+    }
+
+    .col {
+
+      padding: 55px;
+      margin-left: 60px;
+      margin-top: -70px;
+
+    }
+
+    .row1 {
+      display: flex;
+      padding: 10px;
+      margin-left: 40px;
+      margin-top: 3px;
+
+    }
+
+    .button {
+      text-decoration: none;
+      background-image: url("5.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      width: 900px;
+      height: 500px;
+      background-size: cover;
+    }
+
+    .pre1 {
+      color: black;
+      font-size: 40px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: 30px;
+    }
+
+    .pre2 {
+      color: black;
+      font-size: 17px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: -30px;
+      margin-top: -20px;
+
+    }
+
+    .button1 {
+      text-decoration: none;
+      background: transparent;
+      color: black;
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border-radius: 10px;
+      margin-left: 425px;
+      margin-top: -20px;
+    }
+
+    .button1:hover {
+      color: black;
+      background-color: rgb(105, 99, 99);
+    }
+
+    .button2 {
+      text-decoration: none;
+      background-image: url("6.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin-left: 10px;
+      width: 1000px;
+      height: 835px;
+      background-size: cover;
+
+    }
+
+    .pre3 {
+      color: grey;
+      font-size: 40px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: -170px;
+      margin-top: 0px;
+    }
+
+    .pre4 {
+      color: grey;
+      font-size: 12px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: -50px;
+      margin-top: -60px;
+
+    }
+
+    .button3 {
+      text-decoration: none;
+      background-image: url("7.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin-left: 10px;
+      width: 1000px;
+      height: 835px;
+      background-size: cover;
+
+    }
+
+    .pre5 {
+      color: grey;
+      font-size: 40px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: -160px;
+      margin-top: 10px;
+    }
+
+    .pre6 {
+      color: grey;
+      font-size: 11px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: -40px;
+      margin-top: -80px;
+
+    }
+
+    .bttn1 {
+      text-decoration: none;
+      background-image: url("8.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border-radius: 10px;
+      width: 500px;
+      height: 300px;
+      background-size: cover;
+      margin-left: 5px;
+    }
+
+    .bttn2 {
+      text-decoration: none;
+      background-image: url("9.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border-radius: 10px;
+      width: 500px;
+      height: 300px;
+      background-size: cover;
+      margin-left: 5px;
+    }
+
+    .bttn3 {
+      text-decoration: none;
+      background-image: url("10.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border-radius: 10px;
+      width: 500px;
+      height: 300px;
+      margin-left: 5px;
+      background-size: cover;
+
+    }
+
+    .bttn4 {
+      text-decoration: none;
+      background-image: url("11.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border-radius: 10px;
+      width: 500px;
+      height: 300px;
+      background-size: cover;
+      margin-left: 5px;
+    }
+
+    .bttn5 {
+      text-decoration: none;
+      background-image: url("12.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border-radius: 10px;
+      width: 500px;
+      height: 300px;
+      background-size: cover;
+      margin-left: 5px;
+    }
+
+    .bttn6 {
+      text-decoration: none;
+      background-image: url("13.png");
+      color: black;
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border-radius: 10px;
+      width: 500px;
+      height: 300px;
+      margin-left: 5px;
+      background-size: cover;
+
+    }
+
+    .H3 {
+
+      font-size: 60px;
+      margin-bottom: 1.5vw;
+      font-family: fantasy;
+      display: flex;
+      margin-left: 650px;
+    }
+
+    .container {
+      border: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .p1 {
+      font-size: 50px;
+      font-weight: bolder;
+      margin-bottom: 10px;
+      margin-left: 20px;
+      text-decoration: underline;
+    }
+
+    footer::before {
+      content: "";
+      background-color: #021214;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-position: center center;
+      z-index: -1;
+      opacity: 0.45;
+
+
+    }
+
+    footer {
+      display: flex;
+
+      top: 0px;
+      position: relative;
+      margin: 0px;
+      width: 100%;
+    }
+
+    .footer1 {
+
+
+      height: 100%;
+      width: 31%;
+      color: black;
+      font-size: 19px;
+      padding: 4px;
+    }
+
+    .footer1 {
+
+
+      height: 100%;
+      width: 31%;
+      color: black;
+      font-size: 19px;
+      padding: 4px;
+    }
+
+    #part1 {
+      margin-left: 40px;
+    }
+
+    #part2 {
+      margin-left: 60px;
+    }
+
+    #part3 {
+      padding: 60px;
+      text-decoration: underline;
+    }
+
+    i {
+      font-size: 40PX;
+      padding: 17px;
+    }
+
+
+
+    #part3 a {
+      text-decoration: none;
+      color: black;
+    }
+
+    #part3 a i:hover {
+      transform: scale(1.2);
+    }
+
+    .lastfooter {
+      background-color: black;
+      color: white;
+      display: flex;
+      padding: 10px;
+    }
+
+    .lastfooter p {
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .lastfooter img {
+      width: 200px;
+      height: 50px;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>Image Slider(GFX50S)</title>
+
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="logo"> <img src="Fujifilm_X_series.png" alt=""></div>
+    <ul>
+      <li id="item"><a href="home.html"> HOME</a></li>
+
+      <li id="item"><a href="Product.html"> PRODUCTS</a></li>
+      <li id="item"><a href="#down"> Contact US</a></li>
+      <li id="item"><a href="feedback.html"> FEEDBACK & YOUR QUERY</a></li>
+    </ul>
+    <form action="backend.php">
+
+      <input type="search" name="search" id="" placeholder="Type to Search">
+    </form>
+    <a href="loginfoem.html" class="acc"> <i class="far fa-user-circle"></i></a>
+  </nav>
+  <div class="container">
+    <div class="Myslideshow">
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <div class="slide first">
+            <img src="1.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="2.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="3.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="4.png" alt="">
+          </div>
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>
+      <script type="text/javascript">
+        var counter = 1;
+        setInterval(function () {
+          document.getElementById('radio' + counter).checked = true;
+          counter++;
+          if (counter > 4) {
+            counter = 1;
+          }
+        }, 5000);
+      </script>
+    </div>
+  </div>
+  <div class="container">
+    <h2 class="H2"> OPEN YOUR EYES </h2>
+  </div>
+  <div class="container">
+    <pre class="Paragraph">
+            The FUJIFILM GFX 50S delivers the world’s best image quality. It combines outstanding resolution of 51.4 megapixels with exceptional tones, advanced color reproduction and high-
+            performance lenses. This level of image quality is purely motivational. The world around you changes the moment you hold this camera in your hand. Appreciate all that can be achieved
+            with Fujifilm’s new medium format mirrorless camera system, GFX
+        </pre>
+  </div>
+  <div>
+    <pre class="h1">Modle Name -: FUJIFILM GFX 50S</pre>
+  </div>
+  <div class="container">
+    <div class="col">
+      <pre class="sensor">Sensor</pre>
+      <pre class="APS">43.8mm x 32.9mm</pre>
+    </div>
+    <div class="col">
+      <pre class="sensor ">Efective Pixles</pre>
+      <pre class="APS">51.4M</pre>
+    </div>
+    <div class="col">
+      <pre class="sensor">Mount</pre>
+      <pre class="APS">G Mount</pre>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col1">
+      <button class="button"></button>
+    </div>
+    <div>
+      <pre class="pre1">Firmware Ver.400</pre>
+      <pre class="pre2">
+            The biggest firmware upgrade in the
+            history of GFX System.
+        </pre>
+      <a href="https://fujifilm-x.com/en-in/products/cameras/gfx-50s/feature-firmware/"><button class=" button1">LEARN
+          MORE</button></a>
+    </div>
+
+  </div>
+  <div class="container">
+
+    <div>
+      <pre class="pre3">
+            HISTORY 
+            REGENRATED
+        </pre>
+      <pre class="pre4">
+            The GFX 50S was regenrated as the first model for the GFX system,bringing
+            medium format cameras black to the wider photographic community. It boasts
+            outstanding handling, expandability and style, perfected in the pursuit of 
+            ultimate functionality. Complemented with a variety of accessories including
+            the vertical battery grip and EVF till adapted ,the camera is an ideal tool for
+            professional photographers. This model utilizes the performance of large
+            diameter lenses to the maximum extent ranging from fasion and commercial
+            photography to landscapes.
+        </pre>
+    </div>
+    <div class="col1">
+      <button class="button2"></button>
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="col1">
+      <button class="button3"></button>
+    </div>
+    <div>
+      <pre class="pre5">
+            HISTORY 
+            REBORN
+        </pre>
+      <pre class="pre6">
+            FUJIFILM has continued to develop and manufacture medium format film 
+            camers. The priority has always been to achieve premium image quality.
+            The GFX 50R is a rangefinder style,which has been reborn through the history 
+            of medium format cameras . Just like medium format film cameras in the past 
+            the GFX 50R has been developed in pursuit of a compact and lightweight
+            system while delivering the ultimate picture quality for everyday snapshots 
+            aand street photography. This new model expands the potential for the GFX 
+            system and makes medium format output even more accessible.
+            </pre>
+    </div>
+
+  </div>
+  <div>
+    <p class="p1"> X Stories --: </p>
+  </div>
+  <div class="container">
+    <a href="https://fujifilm-x.com/en-in/stories/lens-storeis-gf120mmf4-r-lm-ois-wr-macro-x-prasanth-gulfu/"><button
+        class="bttn1"></button></a>
+    <a href="https://fujifilm-x.com/en-in/stories/project-peak-kristina-varaksina-x-gf80mmf1-7/"><button
+        class="bttn2"></button></a></button>
+    <a href="https://fujifilm-x.com/en-in/stories/fuji-guys-spill-the-beans-x-webcam-2/"><button
+        class="bttn3"></button></a>
+  </div>
+  <div class="container">
+    <a href="https://fujifilm-x.com/en-in/stories/gf30mmf3-5-reveal-with-patrick-la-roque/"><button
+        class="bttn4"></button></a>
+    <a href="https://fujifilm-x.com/en-in/stories/gfx-stories-matthieu-paley-x-gfx-50s-fw-ver-4-00/"><button
+        class="bttn5"></button></a></button>
+    <a href="https://fujifilm-x.com/en-in/stories/gfx-major-firmware-update-the-next-chapter/"><button
+        class="bttn6"></button></a>
+  </div>
+  <footer>
+    <div id="part1" class="footer1">
+      <h3> CONTACT INFORMATION India -:</h3>
+      <p> <b> Main Location(India):</b>Unitech Cyber Park, Unit No. 801-807,
+        8th Floor, Tower C, Sector 39,
+        Gurugram- 122001, Haryana </p>
+      <p> <b>INDIA Tel: +91-(0)124-4325500</b></p>
+      <p><b>INDIA Fax: +91-(0)124-4325555</b></p>
+      <p><b>India Email :</b> (91) india@fujifilm.com </p>
+      <p><b> India Customer Care Email: </b> indiaCustomer@fujicare.com</p>
+      <p id="down"></p>
+
+
+    </div>
+    <div id="part2" class="footer1">
+      <h3> CONTACT INFORMATION Global -: </h3>
+      <p> <b> Main Location:</b> 50 Main ST Boston MA </p>
+      <p><b> Global Phone :</b>(555) 555-5555 </p>
+      <p><b> Coustomer Care:</b> (333) 333-3333</p>
+      <p><b>Global Email :</b> (555) global@fujifilm.com </p>
+      <p><b> Customer Care Email: </b> Customer@fujicare.com</p>
+      <p id="down"></p>
+
+
+
+    </div>
+    <div id="part3" class="footer1">
+      <h1>FOLLOW US ON -:</h1>
+      <a href=" https://www.facebook.com/fujifilmXIndia/"> <i class="fab fa-facebook"></i></a>
+      <a href=" https://www.instagram.com/fujifilmxindia/"> <i class="fab fa-instagram"></i></a>
+      <a href=" https://www.youtube.com/channel/UCZvtcRxo82A4-7BQ2T8MOAA"> <i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/visitsaudinow"> <i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+  <div class="lastfooter">
+    <img src="fujilogo.jpg" alt="">
+    <p> copyright@fujifilm india pvt.ltd</p>
+
+  </div>
+</body>
+
+</html>
